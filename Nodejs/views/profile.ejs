@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ejs page</title>
+  </head>
+  <body>
+    <%- include('common/header');%>
+    <center><h1>Welcome EJS</h1></center>
+    <h2>Name: <%= user.name %></h2>
+    <h2>gmail: <%= user.gmail %></h2>
+    <h2>number: <%= user.number %></h2>
+    <h2>Skill:-</h2>
+    <ul>
+      <% user.skil.forEach((item)=>{ %>
+      <li><h2><%= item %></h2></li>
+      <% })%>
+    </ul>
+  </body>
+</html>
